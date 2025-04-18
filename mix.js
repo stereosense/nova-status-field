@@ -14,7 +14,6 @@ class NovaExtension {
   webpackPlugins() {
     return new webpack.ProvidePlugin({
       _: 'lodash',
-      Errors: 'form-backend-validation',
     })
   }
 
@@ -26,8 +25,8 @@ class NovaExtension {
     webpackConfig.resolve.alias = {
       ...(webpackConfig.resolve.alias || {}),
       'laravel-nova': path.join(
-        __dirname,
-        '../../vendor/laravel/nova/resources/js/mixins/packages.js'
+          __dirname,
+          '../../laravel/nova/resources/js/mixins/packages.js'
       ),
     }
 
